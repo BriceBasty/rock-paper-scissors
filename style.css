@@ -1,0 +1,42 @@
+/*#ff771c; -3px 1px 0px rgba(28,110,164,0)*/
+
+body {
+	background-color: #ff771c;
+	font-size: 62.5%;
+}
+
+h1, p {
+	text-align: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	text-shadow: 3px 3px 0 #301834, 3px -3px 0 #301834, -3px 3px 0 #301834, -3px -3px 0 #301834, 3px 0px 0 #301834, 0px 3px 0 #301834, -3px 0px 0 #301834, 0px -3px 0 #301834;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+p {
+	font-size: 2rem;
+}
+
+.line-separator{
+	height:5px;
+	background:#ffffff;
+	border: 3px solid #301834;
+	border-radius: 5px;
+	margin: auto;
+	margin-top: 30px;
+	width: 30%;
+}
+
+.image-pick {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    max-width: 66%;
+    margin: auto;
+}
