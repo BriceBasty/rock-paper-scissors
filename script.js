@@ -6,14 +6,10 @@ let computerSelection;
 const mod = (playerSelection, computerSelection, n) => ((playerSelection - computerSelection) % n + n) % n;
 
 //Select clickable images of rock, paper, scissors
-var rock = document.querySelector('#rock');
-var paper = document.querySelector('#paper');
-var scissors = document.querySelector('#scissors');
+let rock = document.querySelector('#rock');
+let paper = document.querySelector('#paper');
+let scissors = document.querySelector('#scissors');
 
-//Score and round
-let round = 1;
-var humanScore = 0;
-var computerScore = 0;
 
 //Onclick events for images
 rock.addEventListener('click', () => {
@@ -34,8 +30,12 @@ scissors.addEventListener('click', () => {
 
 //Play a round
 function playRound(playerSelection, computerSelection, n) {
+    let round = 1;
     round++;
     document.getElementById("round-count").textContent = round;
+  
+    let humanScore = 0;
+    let computerScore = 0;
 
     computerSelection = Math.floor(Math.random() * 3);
     
