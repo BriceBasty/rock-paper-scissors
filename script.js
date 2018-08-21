@@ -1,7 +1,5 @@
-//To see the live version click Preview --> Preview file index.html on index.html
-
 //Modulo calculation
-let playerSelection = document.querySelector('#image-pick-item'); // = window.prompt("Choose between Rock, Paper and Scissors").toLowerCase();
+let playerSelection;
 let computerSelection;
 
 //Modulo for negative integers
@@ -63,12 +61,3 @@ function playRound(playerSelection, computerSelection, n) {
 function game () {
     
 }*/
-
-
-/*Console logs
-console.log(mod(playerSelection, computerSelection, 3)+'\n');
-
-console.log(playerSelection);
-console.log(computerSelection+'\n');
-
-console.log(playRound(playerSelection, computerSelection, 3));*/
