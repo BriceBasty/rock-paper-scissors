@@ -2,6 +2,11 @@
 let playerSelection;
 let computerSelection;
 
+//Score
+let round = 1;
+let humanScore = 0;
+let computerScore = 0;
+
 //Modulo for negative integers
 const mod = (playerSelection, computerSelection, n) => ((playerSelection - computerSelection) % n + n) % n;
 
@@ -14,28 +19,24 @@ let scissors = document.querySelector('#scissors');
 //Onclick events for images
 rock.addEventListener('click', () => {
   playerSelection = 0;
-  playRound(playerSelection, computerSelection, 3);
+  game();
 });
 
 paper.addEventListener('click', () => {
   playerSelection = 1;
-  playRound(playerSelection, computerSelection, 3);
+  game();
 });
 
 scissors.addEventListener('click', () => {
   playerSelection = 2;
-  playRound(playerSelection, computerSelection, 3);
+  game();
 });
 
 
 //Play a round
 function playRound(playerSelection, computerSelection, n) {
-    let round = 1;
     round++;
     document.getElementById("round-count").textContent = round;
-  
-    let humanScore = 0;
-    let computerScore = 0;
 
     computerSelection = Math.floor(Math.random() * 3);
     
@@ -78,5 +79,6 @@ function game () {
         document.getElementById("human-score").textContent = humanScore;
     }
     else {
+      playRound(playerSelection, computerSelection, 3);
     }
 }
