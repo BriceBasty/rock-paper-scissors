@@ -1,21 +1,21 @@
-//To see the live version click Preview --> Preview file index.html on index.html
-
 //Modulo calculation
-let playerSelection = document.querySelector('#image-pick-item'); // = window.prompt("Choose between Rock, Paper and Scissors").toLowerCase();
+let playerSelection;
 let computerSelection;
 
 //Modulo for negative integers
 const mod = (playerSelection, computerSelection, n) => ((playerSelection - computerSelection) % n + n) % n;
 
 //Select clickable images of rock, paper, scissors
-var rock = document.querySelector('#rock');
-var paper = document.querySelector('#paper');
-var scissors = document.querySelector('#scissors');
+let rock = document.querySelector('#rock');
+let paper = document.querySelector('#paper');
+let scissors = document.querySelector('#scissors');
 
-//Score and round
+//Scores
 let round = 1;
-var humanScore = 0;
-var computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
+let finalScore = humanScore - computerScore;
+let finalScorer = humanScore + computerScore;
 
 //Onclick events for images
 rock.addEventListener('click', () => {
@@ -57,18 +57,30 @@ function playRound(playerSelection, computerSelection, n) {
     else {
         alert("Problem in playRound");
     }
+
+    game();
 }
 
-/* Play 5 rounds and see who won
+/*Play 5 rounds and see who won */
 function game () {
-    
-}*/
-
-
-/*Console logs
-console.log(mod(playerSelection, computerSelection, 3)+'\n');
-
-console.log(playerSelection);
-console.log(computerSelection+'\n');
-
-console.log(playRound(playerSelection, computerSelection, 3));*/
+    if (humanScore === 5) {
+        alert("Human Won!");    
+        round = 1;
+        document.getElementById("round-count").textContent = round;
+        computerScore = 0;
+        humanScore = 0;
+        document.getElementById("computer-score").textContent = computerScore;
+        document.getElementById("human-score").textContent = humanScore;
+    }
+    else if (computerScore === 5) {
+        alert("Computer Won!")
+        round = 1;
+        document.getElementById("round-count").textContent = round;
+        computerScore = 0;
+        humanScore = 0;
+        document.getElementById("computer-score").textContent = computerScore;
+        document.getElementById("human-score").textContent = humanScore;
+    }
+    else {
+    }
+}
