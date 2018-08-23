@@ -10,12 +10,6 @@ let rock = document.querySelector('#rock');
 let paper = document.querySelector('#paper');
 let scissors = document.querySelector('#scissors');
 
-//Scores
-let round = 1;
-let humanScore = 0;
-let computerScore = 0;
-let finalScore = humanScore - computerScore;
-let finalScorer = humanScore + computerScore;
 
 //Onclick events for images
 rock.addEventListener('click', () => {
@@ -36,8 +30,12 @@ scissors.addEventListener('click', () => {
 
 //Play a round
 function playRound(playerSelection, computerSelection, n) {
+    let round = 1;
     round++;
     document.getElementById("round-count").textContent = round;
+  
+    let humanScore = 0;
+    let computerScore = 0;
 
     computerSelection = Math.floor(Math.random() * 3);
     
@@ -57,30 +55,9 @@ function playRound(playerSelection, computerSelection, n) {
     else {
         alert("Problem in playRound");
     }
-
-    game();
 }
 
-/*Play 5 rounds and see who won */
+/* Play 5 rounds and see who won
 function game () {
-    if (humanScore === 5) {
-        alert("Human Won!");    
-        round = 1;
-        document.getElementById("round-count").textContent = round;
-        computerScore = 0;
-        humanScore = 0;
-        document.getElementById("computer-score").textContent = computerScore;
-        document.getElementById("human-score").textContent = humanScore;
-    }
-    else if (computerScore === 5) {
-        alert("Computer Won!")
-        round = 1;
-        document.getElementById("round-count").textContent = round;
-        computerScore = 0;
-        humanScore = 0;
-        document.getElementById("computer-score").textContent = computerScore;
-        document.getElementById("human-score").textContent = humanScore;
-    }
-    else {
-    }
-}
+    
+}*/
