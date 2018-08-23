@@ -57,7 +57,26 @@ function playRound(playerSelection, computerSelection, n) {
     }
 }
 
-/* Play 5 rounds and see who won
+/*Play 5 rounds and see who won */
 function game () {
-    
-}*/
+    if (humanScore === 5) {
+        alert("Human Won!");    
+        round = 1;
+        document.getElementById("round-count").textContent = round;
+        computerScore = 0;
+        humanScore = 0;
+        document.getElementById("computer-score").textContent = computerScore;
+        document.getElementById("human-score").textContent = humanScore;
+    }
+    else if (computerScore === 5) {
+        alert("Computer Won!")
+        round = 1;
+        document.getElementById("round-count").textContent = round;
+        computerScore = 0;
+        humanScore = 0;
+        document.getElementById("computer-score").textContent = computerScore;
+        document.getElementById("human-score").textContent = humanScore;
+    }
+    else {
+    }
+}
